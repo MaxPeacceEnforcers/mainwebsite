@@ -1,0 +1,6 @@
+data:
+  - name: Home
+    link: /
+  - name: About
+    link: "#"
+    mega: true
