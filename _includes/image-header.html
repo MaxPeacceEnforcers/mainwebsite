@@ -1,0 +1,127 @@
+<section>
+
+    <style>
+      .header-row {
+            background-image: url("{{page.banner.image-url}}");
+            background-size:cover; 
+            background-repeat: no-repeat;
+            width: 100%;
+            min-height:25rem; 
+            height: calc(33vw - 1vh);
+            background-position: {{ page.banner.image-align}};
+
+        }
+
+        #header-row-text {
+            height:100%;
+            width:100%;
+        }
+        #header-row-text h1 {
+            text-shadow: 5px 5px 4px #000000;
+            font-size:calc(100% + 4vw);
+        }
+        #header-row-text h2 {
+            text-shadow: 5px 5px 4px #000000;
+            font-size:calc(100% + 1vw);
+        }
+
+
+        /*WHY US*/
+        /*Stolen CSS from CCRA Golf site*/
+
+        #mu-why-us {
+            background-color: #fff;
+            float: left;
+            padding: 30px 0 30px;
+            display: inline;
+            width: 100%;
+        }
+
+        .mu-why-us-area {
+            display: inline;
+            float: left;
+            text-align: center;
+            width: 100%;
+        }
+
+        .mu-why-us-area h2 {
+            color: #333;
+            
+        }
+
+        .mu-why-us-content {
+            display: inline;
+            float: left;
+            margin-top: 0px;
+            width: 100%;
+        }
+
+        .mu-why-us-single {
+            display: inline;
+            float: left;
+            width: 100%;
+            padding: 0 5px;
+        }
+
+        .my-why-us-single-icon {
+            /* border: 1px solid #ccc; */
+            font-size: 30px;
+            display: inline-block;
+            width: 85px;
+            height: 85px;
+            line-height: 85px;
+            border-radius: 50%;
+            margin-bottom: 0px;
+        }
+
+        .mu-why-us-single h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .mu-why-us-single p {
+            font-size: 15px;
+        }
+    </style>
+
+
+    <div class="container-fluid m-0 p-0 banner">
+        <div class="header-row">
+        <div id="header-row-text" class="row pr-0 align-items-center">
+            <div class="d-block text-center mx-auto">
+            <h1 class="font-weight-bold col pr-0 text-light">{{page.banner.header}}</h1>
+            <h2 class="font-weight-normal col text-light">{{page.banner.subheader}}</h2>
+            </div>
+        </div>
+        </div>
+        <div class="header-text-area bg-light text-dark" style="width: 100%;">
+        <div class="text-center pt-5 pb-5">
+            <h1 style="font-size:calc(100% + 2vw);">{{page.subbanner.text}}</h1>
+            <h3 style="font-size:calc(100% + 0.5vw);">{{ page.subbanner.subtext}}</h3>
+            <!-- <br> -->
+            <!-- <h1 class="text-center pt-5">What We do... and what <strong>You</strong> can learn</h1> -->
+            <div class="row ">                              
+            {% for item in page.subbanner.columns %}
+            <div class="col-md">
+                <div class="mu-why-us-single">
+                <div class="my-why-us-single-icon">
+                    <i class="{{item.icon}}" aria-hidden="true"></i>
+                </div>
+                <h3>{{item.text}}</h3>        
+                </div>
+                
+            </div>
+            {% endfor %}
+            
+            <br>
+            <!-- <div class="w-100 pt-5 d-inline-flex justify-content-around">
+                <button class="btn btn-lg btn-outline-primary">Button 1</button>
+                <button class="btn btn-lg btn-outline-primary">Button 2</button>
+            </div>                    -->
+            </div>
+                
+        </div>
+        </div>
+    </div>
+
+</section>

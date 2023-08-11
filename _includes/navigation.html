@@ -36,24 +36,30 @@
 
 
 
-<nav class="navbar navbar-expand-sm bg-light">
+<nav class="navbar navbar-expand-xl bg-light">
     <div class="container-fluid">
-        <ul class="navbar-nav">
-            {% for item in site.data.navigation.data %}
-                {% if page.url == item.link %}
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{item.link}}">{{item.name}}</a>
-                    </li>
-                {% else if page.categories contains 'item.categories' %} 
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{item.link}}">{{item.name}}</a>
-                    </li>
-                {% else %} 
-                    <li  class="nav-item">
-                        <a class="nav-link" href="{{item.link}}">{{item.name}}</a>
-                    </li>
-                    {% endif %}
-            {% endfor %}   
+        <ul class="navbar-nav w-100">
+            <div class="row w-100">
+                <div  class="col-md-3"></div>
+                <div class="col-md-1">
+                    <a class="navbar-brand" href="#">
+                        <img src="{{site.data.organization.logo}}" style="width:5vw;">
+                    </a>
+
+                </div>
+                <div class="col-2">
+                    <div class="d-flex float-left">
+                        {% for item in site.data.navigation.data %}
+                                
+                                    <li class="nav-item text-xl-center">
+                                        <a class="nav-item text-xl-center nav-link" href="{{item.link}}">{{item.name}}</a>
+                                    </li>
+                                
+                        {% endfor %}   
+
+                    </div>
+                </div>    
+            </div>
         </ul>
     </div>
 </nav>
