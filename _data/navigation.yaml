@@ -1,6 +1,7 @@
 data:
   - name: Home
     link: /
+    drop: "false"
   - name: About
-    link: "#"
-    mega: true
+    link: "/about.html"
+    drop: "false"
