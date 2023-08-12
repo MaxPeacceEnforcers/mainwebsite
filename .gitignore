@@ -8,3 +8,4 @@ _site/
 .bundle/
 vendor/
 _site/index.html
+CNAME
