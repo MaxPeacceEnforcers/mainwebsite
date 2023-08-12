@@ -1,33 +1,6 @@
 <!-- Start Nav -->
-<!-- <nav class="navbar navbar-expand-xl bg-light">
-    <div class="container-fluid">
-            <div class="row w-100">
-                <div  class="col-md-3"></div>
-                <div class="col-md-1">
-                    <a class="navbar-brand" href="#">
-                        <img src="{{site.data.organization.logo}}" style="width:5vw;">
-                    </a>
-
-                </div>
-                <div class="col-2">
-                    <div class="d-flex float-left h-100 w-100">
-                        <ul class="navbar-nav h-100 w-100">
-                            {% for item in site.data.navigation.data %}
-                                    
-                                        <li class="nav-item text-center h-100 w-100">
-                                            <a class="nav-item d-inline-block text-center align-middle nav-link h-100 w-100" href="{{item.link}}">{{item.name}}</a>
-                                        </li>
-                                    
-                            {% endfor %}   
-                        </ul>
-                    </div>
-                </div>    
-            </div>
-    </div>
-</nav> -->
-
 <section>
-<nav class="navbar navbar-expand-sm  d-flex bg-light navbar-light sticky-top mx-auto w-75">
+<nav class="navbar navbar-expand-sm  d-flex sticky-top mx-auto w-75">
 
     
 
@@ -42,7 +15,7 @@
     </button>
   
       
-    <div class="collapse navbar-collapse justify-content-left" id="collapsibleNavbar">
+    <div class="collapse navbar-collapse justify-content-left w-100" id="collapsibleNavbar">
         <ul class="navbar-nav nav">
         {% for item in site.data.navigation.data %}
         {% if item.drop and item.drop == "false" %}
@@ -66,6 +39,12 @@
         {% endif %}
         {% endfor %}
         </ul>
+
+
+        <button class="nav-item btn" id="themeToggleBtn">
+            <i class="fa fa-adjust"></i>
+        </button>
+
     </div>
   </nav>
 </section>
