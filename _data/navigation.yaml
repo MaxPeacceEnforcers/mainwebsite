@@ -2,6 +2,8 @@ data:
   - name: Home
     link: /
     drop: "false"
+  
   - name: About
     link: "/about.html"
     drop: "false"
+  
