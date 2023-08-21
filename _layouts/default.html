@@ -2,10 +2,77 @@
 layout: base
 ---
 
-<body style="overflow-x:hidden;">
+<body>
+    <div data-simplebar  class="content">
     {% include navigation.html %}
     <!-- Start Content -->
     {{ content }}
     <!-- End Content -->
     {% include footer.html %}
+    </div>
+    <div class="custom-scrollbar">
+        <!-- Scrollbar elements go here -->
+
+    </div>
 </body>
+
+<script>
+    var content = new SimpleBar(document.querySelector('.content'));
+</script>
+
+<style>
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+}
+
+.content {
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+	overflow: hidden;
+}
+
+/*  scrollbar customizations happen here */
+
+.simplebar-track {
+    background-color: rgba(238, 238, 238, 0); /* Change the background color */
+}
+
+.simplebar-scrollbar:before {
+    background-color: rgb(27, 27, 27); /* Change the thumb color */
+}
+
+.simplebar-scrollbar:hover:before {
+    background-color: rgb(37, 37, 37); /* Change the thumb color on hover */
+}
+
+.simplebar-scrollbar.active:before {
+    background-color: rgb(0, 0, 0); /* Change the thumb color when scrolling */
+}
+
+.simplebar-scrollbar {
+    width: 8px; /* Change the width of the scrollbar */
+}
+
+.simplebar-scrollbar:before {
+    width: 100%; /* Change the width of the thumb */
+}
+
+.simplebar-scrollbar:before {
+    border-radius: 4px; /* Add rounded corners to the thumb */
+}
+
+.simplebar-track {
+    opacity: 10.95; /* Adjust the scrollbar opacity */
+}
+
+</style>
+
+
