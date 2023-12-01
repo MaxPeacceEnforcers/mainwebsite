@@ -1,1 +1,30 @@
 logo: "/assets/images/brand/logo.png"
+
+foundingDate: "August 12th 2023"
+
+
+# current active positions
+
+president: 
+  assigned_person: bill
+  contact: notimplimented@ccrarobotics.org NOT VALID
+  long_job_title: "President of the board of directors"
+  short_job_title: "President"
+
+vice-president: 
+  assigned_person: vacant
+  contact: notimplimented@ccrarobotics.org NOT VALID
+  long_job_title: "Vice President of the board of directors"
+  short_job_title: "Vice President"
+
+board_secretary: 
+  assigned_person: chloe
+  contact: notimplimented@ccrarobotics.org NOT VALID
+  long_job_title: "Secretary of the board of directors"
+  short_job_title: "Secretary"
+
+press_secretary:
+  assigned_person: vacant
+  contact: notimplimented@ccrarobotics.org NOT VALID
+  long_job_title: "Press Liaison"
+  short_job_title: "Press Liaison"

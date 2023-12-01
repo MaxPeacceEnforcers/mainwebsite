@@ -1,0 +1,50 @@
+---
+layout: default
+title: Newsroom
+---
+
+<div class="container-fluid">
+    <br>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col">
+            <h1>CCRA Newsroom</h1>
+            {% assign position_info = site.data.organization.press_secretary %}
+            {% assign person_id = position_info.assigned_person %}
+            {% assign person = site.data.personnel | where: "id", person_id | first %}
+            {% assign contact_email = position_info.contact %}
+            <h4>For press inquiries please contact our {{position_info.short_job_title}}, {{person.name}} at <br> {{contact_email}}</h4>
+        </div>
+    </div>
+</div>
+
+
+<br>
+
+<div class="container mx-auto">
+    <div class="row h-100">
+        <!-- For press releases written by us -->
+        <div class="col-4">
+            {% for item in site.newsroom %}
+                {% if item.tags contains "press_release" %}
+                    {{item.title}}
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <!-- spacer -->
+        <div class="col-3">
+
+        </div>
+
+        <!-- for press mentions by other entities -->
+        <div class="col-4">
+            {% for item in site.newsroom %}
+                {% if item.tags contains "press_coverage" %}
+                    {{item.title}}
+                {% endif %}
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
