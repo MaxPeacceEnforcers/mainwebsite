@@ -27,7 +27,7 @@ title: Newsroom
         <div class="col-4">
             {% for item in site.newsroom %}
                 {% if item.tags contains "press_release" %}
-                    {{item.title}}
+                    <a href="{{item.url}}">{{item.title}}</a>
                 {% endif %}
             {% endfor %}
         </div>
@@ -41,7 +41,7 @@ title: Newsroom
         <div class="col-4">
             {% for item in site.newsroom %}
                 {% if item.tags contains "press_coverage" %}
-                    {{item.title}}
+                    <a href="{{item.url}}">{{item.title}}</a>
                 {% endif %}
             {% endfor %}
         </div>
