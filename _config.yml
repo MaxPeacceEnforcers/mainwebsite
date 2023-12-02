@@ -1,3 +1,5 @@
 collections:
   newsroom:
     output: true
+
+page_excerpts: true

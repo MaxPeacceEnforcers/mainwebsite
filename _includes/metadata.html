@@ -12,7 +12,7 @@
 <meta property="og:url" content="{{ page.url }}"/>
 <meta property="image" content="/assets/images/brand/logo-bg-white.png" />
 <meta property="og:image" content="/assets/images/brand/logo-bg-white.png?width=320">
-<meta property="og:description" content="{% if page.metadesc %} {{page.metadesc}} {% else %} {% if page.layout == "default" %}{{site.data.metadata.default.description}}{% endif %} {% if page.layout == "robot" %}{{site.data.metadata.robot.description}}{% endif %} {% endif %}"/>
+<meta property="og:description" content="{% if page.metadesc %} {{page.metadesc}} {%else%} {{page.excerpt}} {% endif %}"/>
 <meta property="og:site_name" content="Central Connecticut Robotics Alliance"/>
 <meta property="title" content="CCRA {% if page.title %}- {{ page.title}}{% endif %}">
 <meta property="og:title" content="CCRA {% if page.title %}- {{ page.title}}{% endif %}">
